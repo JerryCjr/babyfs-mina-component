@@ -3,20 +3,20 @@ Component({
     prop: {
       type: String,
       value: 'index.properties'
-    },
+    }
   },
   data: {
-    flag: false,
+    flag: false
   },
   lifetimes: {
     attached() {
       wx.getSystemInfo({
         success: () => {
           this.setData({
-            flag: true,
-          })
+            flag: true
+          });
         }
-      })
+      });
     }
   }
-})
+});
